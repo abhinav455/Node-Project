@@ -14,6 +14,9 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
+app.enable('trust proxy'); 
+//heroku proxies, redirects all incoming request before it reaches our app
+
 app.set('view engine', 'pug');
 //define where the views/pug templates are stored in the file system
 //mvc views 
